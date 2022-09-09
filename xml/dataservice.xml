@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<namespace name="dataservice" pvid="336">
+
+	<bean name="RoleConfig" json="true">
+		<variable name="lang" type="string" />
+		<variable name="forbid" type="boolean" />
+		<variable name="forbidopentime" type="long" />
+		<variable name="moved" type="boolean" />
+		<variable name="invade" type="boolean" />
+	</bean>
+	<bean name="HashItem" json="true">
+		<variable name="hash" type="string" />
+		<variable name="verify" type="string" />
+	</bean>
+	<bean name="DataItem" json="true">
+		<variable name="name" type="string" />
+		<variable name="json" type="string" />
+		<variable name="size" type="int" />
+		<variable name="hash" type="string" />
+	</bean>
+	<bean name="LangItem" json="true">
+		<variable name="needupdate" type="boolean" />
+		<variable name="name" type="string" />
+		<variable name="json" type="string" />
+		<variable name="size" type="int" />
+		<variable name="hash" type="string" />
+	</bean>
+	<view name="DataView" lifecycle="session">
+		<variable name="lasterror" type="ErrorCodes" />
+		<variable name="roleinfo" type="RoleConfig" />
+		<variable name="dataupdate" type="DataItem" />
+		<variable name="dataremoved" type="string" />
+		<variable name="needupdate" type="boolean" />
+		<variable name="datadone" type="boolean" />
+		<variable name="langupdate" type="LangItem" />
+
+		<variable name="datahash" type="HashItem" />
+		<variable name="langhash" type="HashItem" />
+	</view>
+
+</namespace>

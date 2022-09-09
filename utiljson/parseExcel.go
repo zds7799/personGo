@@ -148,6 +148,7 @@ func bufWriteFile(filePath string, str string) {
 		fmt.Printf("创建文件失败！file: %s\n%v", filePath, err)
 		return
 	}
+	defer f.Close()
 	_, err = f.WriteString(str)
 	if err != nil {
 		fmt.Printf("写入文件失败\n %v", err)
