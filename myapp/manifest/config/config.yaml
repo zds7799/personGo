@@ -8,13 +8,14 @@ logger:
   stdout: true
   path: "./tract"
   ctxKeys: []
-
+database:
+  default:
+    link: "mysql:root:@tcp(localhost:3306)/bitest"
 
 gfcli:
   gen:
     dao:
-      - link:   "mysql:tcnewbi:rE4]Y_Lg3e@tcp(10.0.0.10:3307)/tcnewbi"
-        prefix: "primary_"
+      - link: "mysql:root:@tcp(localhost:3306)/bitest"
 
 
 
